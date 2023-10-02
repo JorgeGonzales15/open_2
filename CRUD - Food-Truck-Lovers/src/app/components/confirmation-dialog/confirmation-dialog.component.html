@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Eliminar</h1>
+<div mat-dialog-content>
+  <p>El registro será eliminado, ¿desea continuar?</p>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial color="warn">
+    <mat-icon>delete</mat-icon>
+    Delete
+  </button>
+</div>

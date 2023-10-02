@@ -1,0 +1,76 @@
+<div class="main-body">
+    <div class="first">
+        <mat-form-field class="filter" appearance="outline">
+            <mat-label>Filtrar</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Filtrar" #input>
+          </mat-form-field> &nbsp;
+          <button mat-raised-button color="primary" routerLink="/food-trucks/new">New Food Truck</button>
+    </div>
+  <div class="table-container">
+    <table mat-table [dataSource]="dataSource" matSort>
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ownerFirstName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>
+        <td mat-cell *matCellDef="let row"> {{row.ownerFirstName}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="ownerLastName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>
+        <td mat-cell *matCellDef="let row"> {{row.ownerLastName}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="brandName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Brand Name </th>
+        <td mat-cell *matCellDef="let row"> {{row.brandName}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+        <td mat-cell *matCellDef="let row"> {{row.email}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>
+        <td mat-cell *matCellDef="let row"> {{row.email}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="websiteUrl">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Website URL </th>
+        <td mat-cell *matCellDef="let row"> {{row.websiteUrl}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="menuUrl">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Menu URL </th>
+        <td mat-cell *matCellDef="let row"> {{row.menuUrl}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
+        <td mat-cell *matCellDef="let row">
+            <button mat-mini-fab color="accent" aria-label="icon button with a edit icon" (click)="editFoodTruck(row.id)">
+                <mat-icon>edit</mat-icon>
+            </button> &nbsp;
+            <button mat-mini-fab color="warn" aria-label="icon button with a delete icon" (click)="deleteFoodTruck(row.id)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+      </tr>
+    </table>
+    <mat-paginator [length]="100"
+                   [pageSize]="10"
+                   [pageSizeOptions]="[5, 10, 25, 100]"
+                   aria-label="Select page">
+    </mat-paginator>
+  </div>
+</div>

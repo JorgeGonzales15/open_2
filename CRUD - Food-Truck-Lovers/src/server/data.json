@@ -1,0 +1,74 @@
+{
+  "food-trucks": [
+    {
+      "ownerFirstName": "Juana",
+      "ownerLastName": "Pérez",
+      "brandName": "La Cocina de Juanita",
+      "email": "juanaperez@gmail.com",
+      "address": "Calle 12 #34-56, Bogotá",
+      "websiteUrl": "https://lacocinadejuana.com",
+      "menuUrl": "https://lacocinadejuana.com/menu.pdf",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "ownerFirstName": "María",
+      "ownerLastName": "García",
+      "brandName": "Los Tacos de María",
+      "email": "mariagarcia@yahoo.com",
+      "address": "Av. Chapultepec #123, Ciudad de México",
+      "websiteUrl": "https://lostacosdemaria.com",
+      "menuUrl": "https://lostacosdemaria.com/menu.pdf"
+    },
+    {
+      "id": 3,
+      "ownerFirstName": "Daniel",
+      "ownerLastName": "Smith",
+      "brandName": "Daniel's Food Truck",
+      "email": "danielsmith@hotmail.com",
+      "address": "123 Main St, New York",
+      "websiteUrl": "https://danielsfoodtruck.com",
+      "menuUrl": "https://danielsfoodtruck.com/menu.pdf"
+    },
+    {
+      "id": 4,
+      "ownerFirstName": "Sara",
+      "ownerLastName": "Lee",
+      "brandName": "Sara's Bakery",
+      "email": "saralee@gmail.com",
+      "address": "Baker St, London",
+      "websiteUrl": "https://sarasbakery.com",
+      "menuUrl": "https://sarasbakery.com/menu.pdf"
+    },
+    {
+      "id": 5,
+      "ownerFirstName": "Pedro",
+      "ownerLastName": "Ramírez",
+      "brandName": "Pedro's Tacos",
+      "email": "pedroramirez@yahoo.com",
+      "address": "Av. Revolución #456, Tijuana",
+      "websiteUrl": "https://pedrostacos.com",
+      "menuUrl": "https://pedrostacos.com/menu.pdf"
+    },
+    {
+      "id": 6,
+      "ownerFirstName": "Anna",
+      "ownerLastName": "Wong",
+      "brandName": "Anna's Dim Sum",
+      "email": "annawong@gmail.com",
+      "address": "Chinatown, San Francisco",
+      "websiteUrl": "https://annasdimsum.com",
+      "menuUrl": "https://annasdimsum.com/menu.pdf"
+    },
+    {
+      "id": 7,
+      "ownerFirstName": "Javier",
+      "ownerLastName": "Hernández",
+      "brandName": "El Trompo de Javier",
+      "email": "javierhernandez@hotmail.com",
+      "address": "Plaza Garibaldi, Mexico City",
+      "websiteUrl": "https://eltrompodejavier.com",
+      "menuUrl": "https://eltrompodejavier.com/menu.pdf"
+    }
+  ]
+}

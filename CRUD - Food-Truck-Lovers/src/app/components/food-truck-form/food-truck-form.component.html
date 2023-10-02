@@ -1,0 +1,52 @@
+<mat-card>
+  <mat-card-title>
+    Offer Form
+  </mat-card-title>
+  <form [formGroup]="foodTruckForm" (ngSubmit)="onSubmit()">
+    <mat-card-content>
+        <div class="row">
+            <mat-form-field appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input matInput type="text" placeholder="Enter your first name" formControlName="ownerFirstName" required>
+            </mat-form-field> &nbsp;
+            <mat-form-field appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input matInput type="text" placeholder="Enter your last name" formControlName="ownerLastName" required>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field appearance="outline">
+              <mat-label>Food Truck or Brand Name</mat-label>
+              <input matInput type="text" placeholder="Enter your food truck or brand name" formControlName="brandName" required>
+            </mat-form-field> &nbsp;
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput type="email" placeholder="Enter your email address" formControlName="email" required>
+            </mat-form-field>
+          </div>
+          <div class="row-address">
+            <mat-form-field appearance="outline">
+              <mat-label>Address</mat-label>
+              <input matInput type="text" placeholder="Enter your address" formControlName="address">
+            </mat-form-field>
+          </div>
+          <div class="row" style="flex-grow: 1;">
+            <mat-form-field appearance="outline">
+              <mat-label>Website URL</mat-label>
+              <input matInput type="url" placeholder="Enter your website URL" formControlName="websiteUrl">
+            </mat-form-field> &nbsp;
+            <mat-form-field appearance="outline">
+              <mat-label>Menu URL</mat-label>
+              <input matInput type="url" placeholder="Enter your menu URL" formControlName="menuUrl">
+            </mat-form-field>
+          </div>          
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="warn" type="button" [mat-dialog-close]="false" routerLink="/food-trucks">Cancel</button> &nbsp;
+        <button mat-raised-button color="primary" type="submit">
+          {{ foodTruckForm.value.id ? 'Update': 'Save'}}
+          <mat-icon>{{ foodTruckForm.value.id ? 'edit' : 'add' }}</mat-icon>
+        </button>
+    </mat-card-actions>
+  </form>
+</mat-card>
