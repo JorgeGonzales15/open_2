@@ -1,0 +1,19 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+
+  // Attributes
+
+  title = 'ACME Learning Center';
+  options = [
+    { path: '/home', title: 'Home'},
+    { path: '/learning/students', title: 'Students'},
+    { path: '/about', title: 'About'}
+  ]
+
+}
