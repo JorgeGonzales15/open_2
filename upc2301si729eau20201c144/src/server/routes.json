@@ -1,0 +1,16 @@
+{
+  "routes": [
+    {
+      "path": "participants",
+      "endpoint": "http://localhost:3000/api/v1/participants"
+    },
+    {
+      "path": "centers",
+      "endpoint": "http://localhost:3000/api/v1/centers"
+    },
+    {
+      "path": "centers/:centerId/participants",
+      "endpoint": "http://localhost:3000/api/v1/centers/:centerId/participants"
+    }
+  ]
+}

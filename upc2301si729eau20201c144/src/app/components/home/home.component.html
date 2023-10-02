@@ -1,0 +1,17 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>
+        Marathon Winner
+    </mat-card-title>
+    <mat-card-subtitle>{{ participant.firstName }} {{ participant.lastName }}</mat-card-subtitle>
+  </mat-card-header>
+  <div class="image-container">
+    <img src="{{ participant.photoUrl }}" alt="{{ participant.firstName }} {{ participant.lastName }}">
+  </div>
+  <mat-card-content>
+  <div class="card-body">
+    <p class="card-text">Record time: {{ participant.recordTime}}</p>
+    <p class="card-text">Marathon center: {{ centerName.name }}</p>
+  </div>
+  </mat-card-content>
+</mat-card>
